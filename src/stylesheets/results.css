@@ -1,0 +1,91 @@
+:root {
+  --primary-color: blue;
+  --secondary-color: red;
+
+  margin: 0;
+  box-sizing: border-box;
+  border-radius: 1rem;
+  font-size: small;
+  font-family: 'Roboto', sans-serif;
+}
+
+.Results {
+  height: 100%;
+  width: 100%;
+  padding: 2rem;
+
+  overflow: hidden;
+	outline: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+	text-align: center;
+	border-radius: 0 0 1rem 1rem;
+  background-color:  var(--primary-color);
+}
+	.pagination {
+		margin: 0;
+	}
+  .Page {
+		height: 100%;
+    display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+  }
+		.Poster {
+			height: 95%;
+			width: 50%;
+			margin: 1rem 0;
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			border: 0.5rem solid silver;
+		}	
+		.Poster:nth-child(2) {
+			margin-left: 1rem;
+		}
+    .Poster img {
+      height: 100%;
+      width: 100%;
+      display: block;
+    }
+    .Poster .overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+
+      opacity: 0;
+      transition: 0.7s ease;
+      display: flex;
+			flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: lightgrey;
+    }
+				.Poster .overlay * {
+					 padding: 1rem;
+					 text-align: center;
+				}
+				.Poster .overlay h2 {
+					 text-decoration: underline;
+				}
+				.Poster:hover .overlay {
+					opacity: 0.9;
+				}
+
+/* Media queries */
+@media screen and (max-width: 600px) {
+	.Results {
+		border-radius: 0;
+	}
+	.Poster .overlay * {
+		font-size: 75%;
+	}
+}

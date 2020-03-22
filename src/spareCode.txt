@@ -1,0 +1,11 @@
+formPageOptions.map((option,index) => {
+
+							<Pagination className='pageNumbers' onChange={onSelectHandler}>
+								<PaginationItem>
+									<PaginationLink>
+									key={index}>
+									{option.innerText}
+									<PaginationLink>
+								</PaginationItem>	
+							</Pagination>
+					  })

@@ -1,0 +1,85 @@
+:root {
+  --primary-color: blue;
+  --secondary-color: red;
+
+  margin: 0;
+  box-sizing: border-box;
+  border-radius: 1rem;
+  font-size: small;
+  font-family: 'Roboto', sans-serif;
+}
+
+.Search {
+  height: 25%;
+  width: 100%;
+	padding: 1rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+	border-radius: 1rem 1rem 0 0;
+  background-color: black;
+  color: white;	
+}
+  form {
+    height: 100%;
+    width: 100%; 
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+    form .inputs {
+      width: 100%;
+      margin-bottom: 1rem;
+      display: flex;
+			justify-content: space-evenly; 
+		}
+    form .title {
+      width: 66%;
+    }
+    form .submit {
+      width: 100%;
+			outline: none;
+      display: flex;
+      justify-content: center;
+			border-radius: 0.5rem;
+    }
+    form .submit.button {
+      width: 33%;
+    }
+		form .years.dropdown {
+			width: 10%;
+			cursor: pointer;
+		}
+
+/* Utility */
+.submit {
+  cursor: pointer;
+}
+
+/* Media queries */
+@media screen and (max-width: 600px) {
+	.Search {
+		border-radius: 0;
+	}
+		.Search .inputs {
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-evenly;
+		}
+			.Search .inputs * {
+				margin-bottom: 10%rem;
+			}
+	form .years.dropdown {
+		height: 25%;
+		background-color: white;
+	}
+	form .submit.button {
+		width: 25%;
+	}
+	form input[type=text] {
+		margin-bottom: .5rem;
+	}
+}
